@@ -11,10 +11,13 @@ class Window(QMainWindow):
         super(Window,self).__init__()
         self.initUI()
 
+    name = input('Enter name : ')
+
     def attendWhatsapp(self):
         def msg():
+	    global name
             pyautogui.click(x=546,y=695)
-            pyautogui.typewrite(['S','a','i',' ','S','a','b','a','r','i','s','h',' ','p','r','e','s','e','n','t',' ','m','a',"'",'a','m','enter'],interval=0.1)
+            pyautogui.typewrite([list(name),'enter'],interval=0.1)
         schedule.every().day.at("07:30").do(test)
         while True:
             schedule.run_pending()
