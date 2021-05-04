@@ -16,7 +16,7 @@ def test():
     pyautogui.click(x=1201, y=79, clicks = 2)
     time.sleep(2)
     pyautogui.click(x=1164, y=710, clicks = 2)
-    pyautogui.typewrite([list(name),' ','1','2','H','2','6','enter'],interval=0.1)
+    pyautogui.typewrite([list(name),' ','enter'],interval=0.1)
 
 
 schedule.every().day.at("07:30").do(msg)
